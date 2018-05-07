@@ -1,7 +1,7 @@
 # VueNextLevelScroll - Bring your scroll game to the next level!
 
 <p align="center">
-  <a href="https://travis-ci.org/Developmint/vue-next-level-scroll"><img src="https://img.shields.io/travis/Developmint/vue-next-level-scroll/master.svg" alt="Build Status"></a>
+  <a href="https://travis-ci.com/Developmint/vue-next-level-scroll"><img src="https://img.shields.io/travis/Developmint/vue-next-level-scroll/master.svg" alt="Build Status"></a>
   <a href="https://codecov.io/gh/Developmint/vue-next-level-scroll"><img src="https://img.shields.io/codecov/c/github/Developmint/vue-next-level-scroll/master.svg" alt="Coverage Status"></a>
   <a href="https://www.npmjs.com/package/vue-next-level-scroll"><img src="https://img.shields.io/npm/dm/vue-next-level-scroll.svg" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/vue-next-level-scroll"><img src="https://img.shields.io/npm/v/vue-next-level-scroll.svg" alt="Version"></a>
