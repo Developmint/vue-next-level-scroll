@@ -11,7 +11,7 @@
 
 > "Click to scroll" **component** using the modern Browser API.
 
-## 🔥 Features
+## :fire:  Features
 
 - Just **one tiny file**
 - Component based (great for **async loading** and code splitting)
@@ -21,10 +21,10 @@
 - Vue as the only dependency
 - Highly customizable
 
-## 🔎 Getting started
+## :mag_right: Getting started
 
 
-### 📦️ Through NPM
+### :package: Through NPM
 
 ```
 $ npm install vue-next-level-scroll
@@ -58,11 +58,11 @@ export default {
 
 ```
 
-### 🔗❌ Using a CDN
+### :link::x: Using a CDN
 
 Sorry! You can't use *VueNextLevelScroll* with a CDN by now.
 
-## 🔐 Usage
+## :hammer_and_wrench: Usage
 
 ### You might like to go for a Polyfill
 
@@ -84,8 +84,8 @@ better suited for universal/SSR code and can be loaded asynchronously as well!
 
 | Prop | Optional? | Comment |
 |---| --- | --- |
-| target | ✅ | Can be any query selector you want (or a function that returns such). Will be passed to the scroll function |
-| scrollFunction  | ✅ | You can define an own scroll function that will take the `target` prop as parameter and can do whatever you like. |
+| target | :white_check_mark: | Can be any query selector you want (or a function that returns such). Will be passed to the scroll function |
+| scrollFunction  | :white_check_mark: | You can define an own scroll function that will take the `target` prop as parameter and can do whatever you like. |
 
 
 ### Default scroll function explained
@@ -153,11 +153,11 @@ export default {
 
 You might not need the polyfill then as well :wink:
 
-## 🛠️ Contributing
+## :gear: Contributing
 
 Please see our [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 
-## 📑 License
+## :bookmark_tabs: License
 
 [MIT License](./LICENSE.md) - Copyright (c) Developmint - Alexander Lichter
