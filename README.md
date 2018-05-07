@@ -144,7 +144,9 @@ However if you need other behavior you can simply write your own function:
 
 <script>
 export default {
- const myScroll = target => doSomeMagicHere(target)
+ methods: {
+   myScroll (target) { doSomeMagicHere(target) }
+  }
 }
 </script>
 ```
