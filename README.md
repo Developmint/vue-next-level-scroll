@@ -47,12 +47,9 @@ export default {
 #### Async import
 
 ```js
-import VueNextLevelScroll from 'vue-next-level-scroll'
-
-
 export default {
   components: {
-    VueNextLevelScroll
+    VueNextLevelScroll: () => import('vue-next-level-scroll')
   }
 }
 
