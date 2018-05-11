@@ -9,10 +9,7 @@ module.exports = {
     jest: true
   },
   extends: 'standard',
-  plugins: [
-    'jest',
-    'vue'
-  ],
+  plugins: ['jest'],
   rules: {
     // Allow paren-less arrow functions
     'arrow-parens': 0,
