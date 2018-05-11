@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { mount } from '@vue/test-utils'
-import ScrollNextLevel from '@/ScrollNextLevel'
+import ScrollNextLevel from '../lib'
 import Target from './fixtures/Target'
 import { render } from '@vue/server-test-utils'
 import flushPromises from 'flush-promises'
