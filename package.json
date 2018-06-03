@@ -4,7 +4,6 @@
   "description": "Bring your scroll game to the next level",
   "author": "Alexander Lichter <npm@lichter.io>",
   "license": "MIT",
-  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Developmint/vue-next-level-scroll"
@@ -12,6 +11,11 @@
   "bugs": {
     "url": "https://github.com/Developmint/vue-next-level-scroll/issues"
   },
+  "main": "dist/vue-next-level-scroll.cjs.js",
+  "module": "dist/vue-next-level-scroll.es.js",
+  "cdn": "dist/vue-next-level-scroll.min.js",
+  "unpkg": "dist/vue-next-level-scroll.min.js",
+  "jsdelivr": "dist/vue-next-level-scroll.min.js",
   "scripts": {
     "dev": "nuxt test/fixture",
     "lint": "eslint lib test",
