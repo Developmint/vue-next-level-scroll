@@ -55,9 +55,17 @@ export default {
 
 ```
 
-### :link::x: Using a CDN
+### :link: Using a CDN
 
-Sorry! You can't use *VueNextLevelScroll* with a CDN by now.
+[UNPKG](https://unpkg.com/vue-next-level-scroll/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-next-level-scroll/dist/) (available as window.ifBot)
+
+```js
+Vue.component('scroll', window.nextLevelScroll)
+
+// Continue as you wish. If you want to load a scroll behavior polyfill, do it **before** adding the CDN link.
+
+```
+
 
 ## :hammer_and_wrench: Usage
 
