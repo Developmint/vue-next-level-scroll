@@ -57,7 +57,7 @@ export default {
 
 ### :link: Using a CDN
 
-[UNPKG](https://unpkg.com/vue-next-level-scroll/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-next-level-scroll/dist/) (available as window.ifBot)
+[UNPKG](https://unpkg.com/vue-next-level-scroll/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-next-level-scroll/dist/) (available as window.nextLevelScroll)
 
 ```js
 Vue.component('scroll', window.nextLevelScroll)
