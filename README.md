@@ -15,6 +15,7 @@
 
 - Just **one tiny file**
 - Component based (great for **async loading** and code splitting)
+- Supports navigation through *VueRouter*
 - Universal code/SSR-safe
 - Well tested and **documented**
 - Compatible with Node 8.0+
@@ -91,6 +92,8 @@ better suited for universal/SSR code and can be loaded asynchronously as well!
 |---| --- | --- |
 | target | :white_check_mark: | Can be any query selector you want (or a function that returns such). Will be passed to the scroll function |
 | scrollFunction  | :white_check_mark: | You can define an own scroll function that will take the `target` prop as parameter and can do whatever you like. |
+| shouldNavigate  | :white_check_mark: | If set, VueRouter will reflect navigation changes in the url(top: no hash, target: hash)  |
+| navigationType  | :white_check_mark: | Default to `push`. The navigation type of that VueRouter should use. Usually either `push` or `replace` |
 
 
 ### Default scroll function explained
