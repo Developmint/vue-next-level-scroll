@@ -1,12 +1,12 @@
 export default {
   functional: true,
-  render(h, { children, data, props: { target, scrollFunction, shouldNavigate = false, navigationType = 'push' }, parent: { $router }, _ssrNode }) {
+  render(h, { children, data, props: { target, scrollFunction, shouldNavigate = false, navigationType = 'push', tag = 'div' }, parent: { $router }, _ssrNode }) {
     const clickFunction = () => {
       const fn = scrollFunction || defaultScrollFunction
       fn(target, { shouldNavigate, navigationType, $router })
     }
 
-    return h('div', {
+    return h(tag, {
       ...data,
       on: {
         // Ignore scroll function on server side
