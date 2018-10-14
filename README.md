@@ -94,9 +94,10 @@ better suited for universal/SSR code and can be loaded asynchronously as well!
 | Prop | Optional? | Comment |
 |---| --- | --- |
 | target | :white_check_mark: | Can be any query selector you want (or a function that returns such). Will be passed to the scroll function |
+| tag | :white_check_mark: | Defaults to `div`. The HTML tag used for the VueNextLevelScroll component |
 | scrollFunction  | :white_check_mark: | You can define an own scroll function that will take the `target` prop as parameter and can do whatever you like. |
 | shouldNavigate  | :white_check_mark: | If set, VueRouter will reflect navigation changes in the url(top: no hash, target: hash)  |
-| navigationType  | :white_check_mark: | Default to `push`. The navigation type of that VueRouter should use. Usually either `push` or `replace` |
+| navigationType  | :white_check_mark: | Defaults to `push`. The navigation type of that VueRouter should use. Usually either `push` or `replace` |
 
 
 ### Default scroll function explained
