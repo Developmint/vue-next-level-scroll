@@ -7,7 +7,7 @@ export default {
       ...data,
       on: {
         // Ignore scroll function on server side
-        click: _ssrNode ? undefined : clickFunction
+        click: _ssrNode || process.server ? undefined : clickFunction
       }
     }, children)
   }
