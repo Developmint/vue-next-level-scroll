@@ -24,6 +24,9 @@
 
 ## :mag_right: Getting started
 
+### :star: Demo
+
+A live demo is available at [https://oqxy5xr5ny.sse.codesandbox.io/](https://oqxy5xr5ny.sse.codesandbox.io/).
 
 ### :package: Through NPM
 
