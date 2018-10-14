@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import { render } from '@vue/server-test-utils'
 import flushPromises from 'flush-promises'
+import VueRouter from 'vue-router'
 import ScrollNextLevel from '../src'
 import Target from './fixtures/Target'
 
@@ -45,6 +46,36 @@ describe('ScrollNextLevel', () => {
         })
       })
 
+      it('does navigate to path without hash when enabled and scroll to top', () => {
+        spy = jest.spyOn(global, 'scroll')
+        const localVue = createLocalVue()
+        localVue.use(VueRouter)
+        const router = new VueRouter()
+
+        const wrapper = mount(ScrollNextLevel, {
+          attachToDocument: true,
+          context: {
+            props: {
+              shouldNavigate: true
+            }
+          },
+          localVue,
+          router
+        })
+
+        router.replace('#test')
+
+        expect(spy).toHaveBeenCalledTimes(0)
+
+        wrapper.trigger('click')
+
+        expect(spy).toBeCalledWith({
+          top: 0,
+          behavior: 'smooth'
+        })
+        expect(router.currentRoute.fullPath).toBe('/')
+      })
+
       it('does smooth scroll to target when present', () => {
         spy = jest.spyOn(Element.prototype, 'scrollIntoView')
 
@@ -73,6 +104,44 @@ describe('ScrollNextLevel', () => {
         expect(element.scrollIntoView).toBeCalledWith({
           behavior: 'smooth'
         })
+      })
+
+      it('does navigate to target after smooth-scrolling', () => {
+        spy = jest.spyOn(Element.prototype, 'scrollIntoView')
+        const localVue = createLocalVue()
+        localVue.use(VueRouter)
+        const router = new VueRouter()
+
+        const wrapper = mount(ScrollNextLevel, {
+          attachToDocument: true,
+          context: {
+            props: {
+              target: targetString,
+              shouldNavigate: true
+            }
+          },
+          slots: {
+            default: Target
+          },
+          localVue,
+          router
+        })
+
+        expect(wrapper.html()).toBe('<div><div id="target">Hi</div></div>')
+
+        expect(wrapper.contains(targetString)).toBe(true)
+
+        const element = wrapper.find(targetString).element
+
+        expect(element.scrollIntoView).toHaveBeenCalledTimes(0)
+
+        wrapper.trigger('click')
+
+        expect(element.scrollIntoView).toBeCalledWith({
+          behavior: 'smooth'
+        })
+
+        expect(router.currentRoute.fullPath).toBe(`/${targetString}`)
       })
 
       it('does send error if target is set but not present', () => {
@@ -161,7 +230,7 @@ describe('ScrollNextLevel', () => {
       })
       wrapper.trigger('click')
 
-      expect(spy).toBeCalledWith(undefined)
+      expect(spy).toBeCalledWith(undefined, { $parent: undefined, navigationType: 'push', shouldNavigate: false })
     })
 
     it('calls custom function with target on click', () => {
@@ -177,7 +246,11 @@ describe('ScrollNextLevel', () => {
       })
       wrapper.trigger('click')
 
-      expect(spy).toBeCalledWith(targetString)
+      expect(spy).toBeCalledWith(targetString, {
+        $parent: undefined,
+        navigationType: 'push',
+        shouldNavigate: false
+      })
     })
   })
 
