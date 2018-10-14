@@ -1,6 +1,6 @@
 export default {
   functional: true,
-  render (h, { children, data, props: { target, scrollFunction }, _ssrNode }) {
+  render(h, { children, data, props: { target, scrollFunction }, _ssrNode }) {
     const clickFunction = () => { scrollFunction ? scrollFunction(target) : defaultScrollFunction(target) }
 
     return h('div', {
@@ -13,7 +13,7 @@ export default {
   }
 }
 
-const defaultScrollFunction = async rawTarget => {
+const defaultScrollFunction = async (rawTarget) => {
   const target = (typeof rawTarget === 'function') ? await rawTarget() : rawTarget
 
   // If no target given, auto scroll to top
@@ -28,7 +28,7 @@ const defaultScrollFunction = async rawTarget => {
 
   // If target prop is present but the node does not exist, send an error
   if (!node) {
-  // eslint-disable-next-line no-console
+    // eslint-disable-next-line no-console
     return console.error(`Could not scroll to ${target}`)
   }
 
