@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 import { mount } from '@vue/test-utils'
-import ScrollNextLevel from '../src'
-import Target from './fixtures/Target'
 import { render } from '@vue/server-test-utils'
 import flushPromises from 'flush-promises'
+import ScrollNextLevel from '../src'
+import Target from './fixtures/Target'
 
 const targetString = '#target'
 
@@ -45,7 +45,7 @@ describe('ScrollNextLevel', () => {
         })
       })
 
-      it('does smooth scroll to target when present', async () => {
+      it('does smooth scroll to target when present', () => {
         spy = jest.spyOn(Element.prototype, 'scrollIntoView')
 
         const wrapper = mount(ScrollNextLevel, {
@@ -182,7 +182,7 @@ describe('ScrollNextLevel', () => {
   })
 
   describe('SSR', () => {
-    it('does nothing on server-side', done => {
+    it('does nothing on server-side', (done) => {
       try {
         render(ScrollNextLevel, {
           context: {
