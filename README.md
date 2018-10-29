@@ -7,6 +7,7 @@
   <a href="https://www.npmjs.com/package/vue-next-level-scroll"><img src="https://img.shields.io/npm/v/vue-next-level-scroll.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-next-level-scroll"><img src="https://img.shields.io/npm/l/vue-next-level-scroll.svg" alt="License"></a>
   <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="We use Conventional Commits"></a>
+  <a href="https://thanks.lichter.io/"><img src="https://img.shields.io/badge/thanks-%E2%99%A5-ff69b4.svg" alt="Thanks badge"></a>
 </p>
 
 > "Click to scroll" **component** using the modern Browser API.
