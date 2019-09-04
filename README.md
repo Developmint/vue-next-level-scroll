@@ -149,7 +149,7 @@ However if you need other behavior you can simply write your own function:
 <template>
     <vue-next-level-scroll
       target="#my-target"
-      :scroll="myScroll">
+      :scrollFunction="myScroll">
       <img src="https://developmint.de/logo.png">
     </vue-next-level-scroll>
     <div id="my-non-existing-target"/>
