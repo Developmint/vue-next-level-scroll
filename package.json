@@ -82,7 +82,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "latest",
     "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^4.7.1",
     "flush-promises": "^1.0.2",
