@@ -72,7 +72,7 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^9.2.1",
     "babel-preset-vue-app": "^2.0.0",
     "bili": "^4.0.0",
     "cheerio": "^1.0.0-rc.2",
