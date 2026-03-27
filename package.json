@@ -70,7 +70,7 @@
     "@vue/server-test-utils": "^1.0.0-beta",
     "@vue/test-utils": "^1.0.0-beta",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
+    "@babel/eslint-parser": "^7.11.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-preset-vue-app": "^2.0.0",
